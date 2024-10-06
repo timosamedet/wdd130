@@ -20,12 +20,16 @@ body{
     margin: auto;
 }
 header nav a{
-    text-decoration: none;
     font-size: 16px;
     font-weight: bold;
     font-family: var(--paragraph_font);
     color: #333;
 }
+
+a{
+    text-decoration: none;
+}
+
 main div:first-child{
     position: relative;
 }
