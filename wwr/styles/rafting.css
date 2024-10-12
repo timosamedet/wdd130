@@ -3,11 +3,11 @@
     --heading-text-color: #ff6b6c;
     --heading-font: 'Roboto', sans-serif;
     --padding: 1rem;
-    --border: 1px solid rgb(0,0,0, 0.1);
+    --border: 1.4px solid rgb(10, 10, 40, 0.5);
     --paragraph_font: 'Afacad+Flux', sans-serif;
     --paragraph-text-color: #333;
     --paragraph-font-size: 16px;
-    --article-background-color: rgba(5, 13, 91, 0.5)
+    --article-background-color: rgba(5, 13, 91, 0.5);
 }
 
 *{
@@ -16,18 +16,48 @@
 }
 
 body{
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
+}
+
+header{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30% 1fr;
+    padding: 1rem 2rem;
+    border-bottom: var(--border);
+}
+
+header img{
+    width: 40%;
+    justify-self: center;
+}
+
+header nav {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
 }
 header nav a{
     font-size: 16px;
     font-weight: bold;
     font-family: var(--paragraph_font);
-    color: #333;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    background-color: #94bf94;
+    border-radius: 8px;
+}
+
+header nav a:hover{
+    background-color: rgb(4, 4, 69, 0.9);
 }
 
 a{
     text-decoration: none;
+}
+
+main {
+    margin-top: 2.5rem;
 }
 
 main div:first-child{
@@ -89,6 +119,72 @@ p{
     font-family: var(--paragraph_font);
     color: var(--paragraph-text-color);
     font-size: var(--paragraph-font-size);
+}
+
+.section-history{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+.history-content{
+    display: flex;
+    margin-top: 1rem;
+    gap: 1.3rem;
+}
+
+.history-content img{
+    width: 28%;
+}
+
+.section-adventure{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+.adventure-images{
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+
+.adventure-images img{
+    width: 100%;
+}
+
+figcaption{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    border-top: var(--border);
+}
+footer p{
+    flex: 1;
+    text-align: center;
+    text-align: center;
+}
+footer nav{
+    display: flex;
+}
+
+footer nav img{
+    width: 60%;
 }
 
 
