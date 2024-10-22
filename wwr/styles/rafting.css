@@ -206,6 +206,12 @@ footer nav img{
 .contact p{
     color: #fff
 }
+#contact-us{
+    color: var(--heading-text-color);
+    background-color: #fff;
+    text-align: center;
+
+}
 
 .employees-section{
     display: grid;
@@ -321,6 +327,11 @@ footer nav img{
 .map-section h2{
     justify-self: center;
 }
+
+.map-section iframe{
+    border:0;
+}
+
  #wireframe{
      color: #007bff;
      font-size: var(--paragraph-font-size);
