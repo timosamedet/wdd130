@@ -203,6 +203,28 @@ footer nav img{
     padding: 0.5rem;
     background-color: rgb(4, 4, 69, 0.9);
 }
+.scrolling-text {
+    width: 85%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.scrolling-content {
+    display: inline-flex;
+    animation: scroll-left 20s linear infinite;
+}
+.scrolling-content p {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(58%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 .contact p{
     color: #fff
