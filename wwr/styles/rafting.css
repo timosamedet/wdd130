@@ -43,12 +43,14 @@ header nav a{
     font-family: var(--paragraph_font);
     color: #fff;
     padding: 0.7rem 1.5rem;
-    background-color: #5cb85c;
+    /*background-color: #5cb85c;*/
+    background-color: #009879;
     border-radius: 8px;
 }
 
 header nav a:hover{
-    background-color: rgb(4, 4, 69, 0.9);
+    background-color: #d1e7dd;
+    color: #000000;
 }
 
 a{
@@ -59,16 +61,15 @@ main {
     margin-top: 2.5rem;
 }
 
-main div:first-child{
-    position: relative;
-}
 
 .hero img{
     display: block;
     width: 100%;
     height: auto;
 }
-
+.hero{
+    position: relative;
+}
 .hero h1 {
     position: absolute;
     top: 10%;
@@ -189,11 +190,11 @@ footer nav img{
 
 /*
 *
------  CONTACT US -------
+-----  CONTACT US PAGE -------
 *
 */
 
-.contact{
+.contact, .upcoming-trip{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -223,7 +224,7 @@ footer nav img{
     row-gap: 1rem;
 }
 
-.employees-article{
+.employees-article, .camp-article{
     display: flex;
     margin-top: 1rem;
     gap: 2rem;
@@ -300,7 +301,7 @@ footer nav img{
     border-radius: 1rem;
 }
 
-.submit-button{
+.submit-button, .subscribe-button{
     align-self: self-start;
     justify-self: center;
 }
@@ -340,14 +341,356 @@ footer nav img{
      font-family: var(--paragraph_font);
  }
 
+
 /*
-colors:
-    *#94bf94
-    #83df83
-    #5cb85c
+*
+     -----  HOME- PAGE -------
+*
 */
 
 
+.upcoming-trip{
+    margin-bottom: 0.5rem;
+}
+
+.upcoming-trip p{
+    color: #fff
+}
+.upcoming-trip marquee p{
+    display: inline-block;
+    margin-right: 4rem;
+}
+
+.book-trip-link{
+    text-align: center;
+    margin-top: 2rem;
+}
+.book-trip-link a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: 'Afacad+Flux';
+    background-color: rgb(4, 4, 69, 0.9);
+    padding: 0.7rem 3rem;
+    border-radius: 20px;
+    position: relative;
+}
+
+.book-trip-link a:hover{
+    background-color: #007bff;
+}
+
+.book-trip-link a:after{
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    background: #BA0D30;
+    position: absolute;
+    right: -270px;
+    top: 50%;
+}
+
+.book-trip-link a:before{
+    content: "";
+    display: block;
+    width: 250px;
+    height: 2px;
+    background: #BA0D30;
+    position: absolute;
+    left: -270px;
+    top: 50%;
+}
+
+.section-content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10rem 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 4rem;
+    column-gap: 1rem;
+}
+.camp-header{
+    grid-column: span 4;
+    text-align: center;
+    word-spacing: 0.1rem;
+}
+
+.camp-header h2{
+    color: rgb(4, 4, 69, 0.9);
+    position: relative;
+}
+
+.camp-header h2:after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #BA0D30;
+    margin: 5px auto 0;
+    position: absolute;
+    left: 32%;
+    right: 32%;
+}
+
+/* The rule is applied to the first p element in the .camp-header*/
+.camp-header p:first-of-type{
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.camp-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+    /*row-gap: 1rem;*/
+    grid-column: span 3;
+}
+
+.camp-article{
+    gap: 0;
+    background-color: #F2F2F2;
+    padding: 0 0;
+}
+
+.camp-info{
+    padding: 0.5rem 0.7rem;
+    text-align: center;
+}
+.camp-title{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom:1rem;
+    font-family: var(--heading-font);
+}
+
+.camp-price-info{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+.camp-price, .camp-age{
+    display: inline-block;
+    position: relative;
+    padding: 3px 5px;
+}
+.camp-price:before{
+    content: "\2022";
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+    position: absolute;
+    top: 4px;
+    left: -4px;
+}
+.camp-date{
+    margin-bottom: 0.5rem;
+}
+
+.camp-description{
+    font-size: 14px;
+}
+
+
+.story{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 3rem;
+    text-align: center;
+}
+.first-story{
+    display: flex;
+    background-color: #F2F2F2;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 0 0.7rem;
+}
+
+.first-story p{
+    font-size: 12px;
+}
+
+.first-story h3{
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.second-story{
+    display: flex;
+    flex-grow: 1;
+    background-color: #707070;
+    color: #fff;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 0 0.7rem;
+}
+.second-story h3{
+    margin-bottom: 0;
+    font-size: 17px;
+}
+.second-story p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.news-letter{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    border: var(--border);
+    padding: 4rem 4rem 0 4rem;
+    align-items: center;
+    row-gap: 1rem;
+    font-family: var(--paragraph_font);
+    color: var(--paragraph-text-color);
+    font-size: var(--paragraph-font-size);
+}
+
+.news-letter-header{
+    color: rgb(4, 4, 69, 0.9);
+    position: relative;
+}
+
+.news-letter-header:after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #BA0D30;
+    margin: 5px auto 0;
+    position: absolute;
+    left: 32%;
+    right: 32%;
+}
+
+.news-letter-control input{
+    width: auto;
+}
+
+.subscribe-button {
+    align-self: center !important;
+}
+
+.subscribe-button button{
+    padding: 0.8rem 2rem;
+}
 
 
 
+
+/*
+      -------------TRIPS - PAGE----------------
+*/
+
+.trip-header{
+    text-align: center;
+    color: black;
+}
+
+.trips-section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 3rem;
+    row-gap: 1rem;
+}
+
+.contact-us-link{
+    margin-top: 4rem;
+}
+
+.trips-rafting-options{
+    grid-template-rows: 2rem 1fr !important;
+    margin-top: 5rem !important;
+}
+
+.rafting-options{
+    grid-template-rows: 2rem repeat(4, 1fr);
+    row-gap: 0.3rem;
+}
+
+.rafting-options-header{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    background: #F2F2F2;
+}
+
+.rafting-options-header h4{
+    margin-bottom: 0 !important;
+    align-self: center;
+}
+.trip{
+    height: 100%;
+    background: #F2F2F2;
+    margin-top: 1rem;
+}
+
+.trip-title{
+    justify-self: flex-start;
+}
+.trip-description{
+    display: flex;
+}
+
+.trip-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    background-color: #F2F2F2;
+    padding: 1rem;
+    border-bottom: 1px solid black;
+}
+
+.trip-story{
+    padding-top: 2rem !important;
+}
+
+.trips-table-section{
+    margin-top: 5rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-family: var(--paragraph_font);
+}
+
+thead tr{
+    background-color:#009879;
+    color: #fff;
+}
+
+tbody tr{
+    font-size: 14px;
+}
+tbody tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+
+tbody tr:hover{
+    background-color: #d1e7dd;
+}
+
+td, th{
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
